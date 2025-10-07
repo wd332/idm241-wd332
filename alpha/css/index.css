@@ -67,8 +67,17 @@ h1 {
     text-align: center;
 }
 
+.link {
+    text-align: center;
+    margin-top: 10px;
+}
+
 .gif {
     text-align: center;
+}
+
+img {
+    border-radius: 1.875rem;
 }
 
 .info {
