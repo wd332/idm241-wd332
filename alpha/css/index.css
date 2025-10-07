@@ -67,9 +67,15 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: "Overlock";
+    font-size: 1.5rem;
+    margin: 30px auto -10px;
+}
+
 .link {
     text-align: center;
-    margin-top: 10px;
+    margin: 10px auto 0;
 }
 
 a {
@@ -100,11 +106,22 @@ p {
 }
 
 ul {
-    margin: 5px auto 0;
+    margin: 5px auto 10px;
 }
 
 li {
     font-family: "Quicksand";
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     font-weight: 600;
+    line-height: 20px;
+}
+
+hr {
+    margin: 30px auto;
+}
+
+@media screen and (max-width: 810px) {
+    .layout {
+        margin: 0 10px;
+    }
 }
