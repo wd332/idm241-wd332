@@ -1,0 +1,95 @@
+@font-face {
+    font-family: Quicksand;
+    src: url('../font/Quicksand-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+.layout {
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Overlock";
+    font-size: 2.5rem;
+    margin-top: 5.5rem;
+    text-align: center;
+}
+
+.gif {
+    text-align: center;
+}
+
+.info {
+    margin-top: 50px;
+}
+
+p {
+    font-family: "Quicksand";
+    font-size: 0.9375rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    margin: 1rem;
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 5px auto 0;
+}
+
+li {
+    font-family: "Quicksand";
+    font-size: 0.75rem;
+    font-weight: 600;
+}
