@@ -73,36 +73,6 @@ h2 {
     margin: 40px auto 0;
 }
 
-.link {
-    text-align: center;
-    margin: 0 auto;
-}
-
-a {
-    font-family: "Quicksand";
-    font-weight: 600;
-    font-size: 0.9375rem;
-
-    background-color: black;
-    border-radius: 1.875rem;
-    box-shadow: 0 0 0.25rem 0.0625rem rgba(0, 0, 0, 0.3);
-    display: inline-block;
-    padding: 10px 14px 12px;
-
-}
-
-a:link {
-    color: white;
-}
-
-a:visited {
-    color: white;
-}
-
-.gif {
-    text-align: center;
-}
-
 .bg {
     background-color: black;
     padding: 50px;
