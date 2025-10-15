@@ -54,10 +54,20 @@
     font-display: swap;
 }
 
+body {
+    background-color: black;
+}
+
 .layout {
     max-width: 800px;
     height: auto;
     margin: 0 auto;
+}
+
+h1,
+hr,
+.info {
+    color: white;
 }
 
 h1 {
@@ -74,7 +84,6 @@ h2 {
 }
 
 .bg {
-    background-color: black;
     padding: 50px;
     display: flex;
     justify-content: center;
