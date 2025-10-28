@@ -42,27 +42,28 @@
                     <ul>
                         <li>expands image from the center slightly by 15%</li>
                         <li>cursor changes to the finger</li>
-                        <li>a white drop shadow</li>
-                        <!--option 1-->
                         <li>ease in with a duration of 530ms</li>
                         <ul>
-                            <li>left & right arrows</li>
-                            <li>page indicators</li>
+                            <li>left & right arrows appear on top of the image</li>
+                            <li>page indicators appear on top of the image</li>
                             <li>a glow of white, 25% opacity drop shadow with a blur of 100 and spread of 10 at origin
                                 surrounds the border of the card</li>
                         </ul>
-                        <!--option 2-->
-                        <li>left & right arrows ease in with a duration of 530ms</li>
-                        <li>page indicators ease in with a duration of 530ms</li>
                     </ul>
                 </li>
                 <li>Hover Off
                     <ul>
-                        <li>shrinks image back to default state</li>
-                        <li>cursor returns to default state</li>
-                        <li>left & right arrows ease out</li>
-                        <li>page indicators ease out</li>
-                        <li>drop shadow ease out</li>
+                        <li>back to default state</li>
+                        <ul>
+                            <li>shrinks image back</li>
+                            <li>cursor returns to normal</li>
+                        </ul>
+                        <li>ease out</li>
+                        <ul>
+                            <li>left & right arrows</li>
+                            <li>page indicators</li>
+                            <li>drop shadow</li>
+                        </ul>
                     </ul>
                 </li>
                 <li>Click On
@@ -88,21 +89,24 @@
             </ul>
             <p>Page Indicators:</p>
             <ul>
-                <li>
+                <!-- <li>
                     Hover On
                     <ul>
                         <li>page indicator becomes brighter slowly</li>
+                        <li>if the page indicator is already selected and is bright, it will not become brighter</li>
                     </ul>
                 </li>
                 <li>Hover Off
                     <ul>
                         <li>page indicator returns to default</li>
+                        <li>page indicator that is selected will not have any changes happen to it</li>
                     </ul>
-                </li>
+                </li> -->
                 <li>Click On
                     <ul>
                         <li>corresponding image to the indicator will replace the current image if need be</li>
-                        <li>page indicator stays bright even after cursor hovers off</li>
+                        <li>eases in with 60% opacity</li>
+                        <li>previously selected indicator will return to default state of 30% opacity</li>
                     </ul>
                 </li>
             </ul>
@@ -114,19 +118,71 @@
                     <ul>
                         <li>expands image from the center slightly by 15%</li>
                         <li>cursor changes to the finger</li>
-                        <li>left & right arrows fades in with a duration of 300ms</li>
-                        <li>left & right arrows fades in with a duration of 300ms</li>
+                        <li>ease in with a duration of 530ms</li>
+                        <ul>
+                            <li>left & right arrows appear on top of the image</li>
+                            <li>page indicators appear on top of the image</li>
+                            <li>a glow of white, 25% opacity drop shadow with a blur of 100 and spread of 10 at origin
+                                surrounds the border of the card</li>
+                        </ul>
                     </ul>
                 </li>
                 <li>Hover Off
                     <ul>
-                        <li>shrinks image back to default state</li>
-                        <li>cursor returns to default state</li>
+                        <li>back to default state</li>
+                        <ul>
+                            <li>shrinks image back</li>
+                            <li>cursor returns to normal</li>
+                        </ul>
+                        <li>ease out</li>
+                        <ul>
+                            <li>left & right arrows</li>
+                            <li>page indicators</li>
+                            <li>drop shadow</li>
+                        </ul>
                     </ul>
                 </li>
                 <li>Click On
                     <ul>
                         <li>view exhibit details on another page</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>On View Box:</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>a text called "This is available now" expands out towards the right with a duration of 800ms
+                            and bounces while it does that</li> <!--info might change. check later-->
+                    </ul>
+                </li>
+                <li>Hover Off
+                    <ul>
+                        <li>the text shrinks back into the box</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Page Indicators:</p>
+            <ul>
+                <!-- <li>
+                    Hover On
+                    <ul>
+                        <li>page indicator becomes brighter slowly</li>
+                        <li>if the page indicator is already selected and is bright, it will not become brighter</li>
+                    </ul>
+                </li>
+                <li>Hover Off
+                    <ul>
+                        <li>page indicator returns to default</li>
+                        <li>page indicator that is selected will not have any changes happen to it</li>
+                    </ul>
+                </li> -->
+                <li>Click On
+                    <ul>
+                        <li>corresponding image to the indicator will replace the current image if need be</li>
+                        <li>eases in with 60% opacity</li>
+                        <li>previously selected indicator will return to default state of 30% opacity</li>
                     </ul>
                 </li>
             </ul>
@@ -137,7 +193,11 @@
         </div>
         <hr>
         <div class="gif">
-            <img src="images/alpha.gif" alt="microinteraction" width="426" />
+            <img src="images/beta.gif" alt="microinteraction" width="426" />
+        </div>
+        <div class="prototype">
+            <a href="https://www.figma.com/proto/OLZKqNc84xJe2CPdzyxAcD/Untitled?page-id=0%3A1&node-id=5-91&viewport=509%2C950%2C0.4&t=6B1XPJN1nYJe0LzQ-1&scaling=min-zoom&content-scaling=fixed"
+                target="_blank">Microinteraction Prototype</a>
         </div>
     </div>
 </body>
