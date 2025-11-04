@@ -16,8 +16,20 @@
             <a href="https://www.teamlab.art/e/tokyo/" target="_blank" class="product">
                 <div class="card">
                     <div class="card-image">
-                        <img class="exhibition" id="productImage" src="images/exhibition.avif" alt="exhibition"
-                            width="1920" height="1112">
+                        <div class="image-scale-wrapper">
+                            <div class="image-slider" id="imageSlider">
+                                <img class="exhibition" src="images/image3.webp" alt="exhibition" width="3840"
+                                    height="2160">
+                                <img class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920"
+                                    height="1112">
+                                <img class="exhibition" src="images/image2.webp" alt="exhibition" width="3840"
+                                    height="2160">
+                                <img class="exhibition" src="images/image3.webp" alt="exhibition" width="3840"
+                                    height="2160">
+                                <img class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920"
+                                    height="1112">
+                            </div>
+                        </div>
                         <div class="nav-controls">
                             <button class="arrow arrow-left" onclick="previousImage(event)">←</button>
                             <button class="arrow arrow-right" onclick="nextImage(event)">→</button>
@@ -47,11 +59,23 @@
                 <li>hover off</li>
                 <li>click on</li>
             </ul>
-            <p>On View Box:</p>
+            <p>Left Arrow:</p>
+            <ul>
+                <li>hover one</li>
+                <li>hover off</li>
+                <li>click on</li>
+            </ul>
+            <p>Right Arrow:</p>
+            <ul>
+                <li>hover one</li>
+                <li>hover off</li>
+                <li>click on</li>
+            </ul>
+            <!-- <p>On View Box:</p>
             <ul>
                 <li>hover on</li>
                 <li>hover off</li>
-            </ul>
+            </ul> -->
             <p>Page Indicators:</p>
             <ul>
                 <li>hover on</li>
@@ -96,13 +120,55 @@
                     </ul>
                 </li>
             </ul>
-            <p>On View Box:</p>
+            <p>Left Arrow</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>background color eases with 200ms to 40% opacity</li>
+                    </ul>
+                </li>
+                <li>
+                    Hover Off
+                    <ul>
+                        <li>background color returns to default state</li>
+                    </ul>
+                </li>
+                <li>
+                    Click on
+                    <ul>
+                        <li>image will slide in from the left</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Right Arrow</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>background color eases with 200ms to 40% opacity</li>
+                    </ul>
+                </li>
+                <li>
+                    Hover Off
+                    <ul>
+                        <li>background color returns to default state</li>
+                    </ul>
+                </li>
+                <li>
+                    Click on
+                    <ul>
+                        <li>image will slide in from the right</li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- <p>On View Box:</p>
             <ul>
                 <li>
                     Hover On
                     <ul>
                         <li>a text called "This is available now" expands out towards the right with a duration of 800ms
-                            and bounces while it does that</li> <!--info might change. check later-->
+                            and bounces while it does that</li>
                     </ul>
                 </li>
                 <li>Hover Off
@@ -110,7 +176,7 @@
                         <li>the text shrinks back into the box</li>
                     </ul>
                 </li>
-            </ul>
+            </ul> -->
             <p>Page Indicators:</p>
             <ul>
                 <!-- <li>
@@ -129,8 +195,9 @@
                 <li>Click On
                     <ul>
                         <li>corresponding image to the indicator will replace the current image if need be</li>
-                        <li>eases in with 60% opacity</li>
-                        <li>previously selected indicator will return to default state of 30% opacity</li>
+                        <li>eases with 300ms to 60% opacity with 31px width</li>
+                        <li>previously selected indicator will return to default state of 30% opacity with 15px width
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -172,13 +239,55 @@
                     </ul>
                 </li>
             </ul>
-            <p>On View Box:</p>
+            <p>Left Arrow</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>background color eases with 200ms to 40% opacity</li>
+                    </ul>
+                </li>
+                <li>
+                    Hover Off
+                    <ul>
+                        <li>background color returns to default state</li>
+                    </ul>
+                </li>
+                <li>
+                    Click on
+                    <ul>
+                        <li>image will slide in from the left</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Right Arrow</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>background color eases with 200ms to 40% opacity</li>
+                    </ul>
+                </li>
+                <li>
+                    Hover Off
+                    <ul>
+                        <li>background color returns to default state</li>
+                    </ul>
+                </li>
+                <li>
+                    Click on
+                    <ul>
+                        <li>image will slide in from the right</li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- <p>On View Box:</p>
             <ul>
                 <li>
                     Hover On
                     <ul>
                         <li>a text called "This is available now" expands out towards the right with a duration of 800ms
-                            and bounces while it does that</li> <!--info might change. check later-->
+                            and bounces while it does that</li>
                     </ul>
                 </li>
                 <li>Hover Off
@@ -186,7 +295,7 @@
                         <li>the text shrinks back into the box</li>
                     </ul>
                 </li>
-            </ul>
+            </ul> -->
             <p>Page Indicators:</p>
             <ul>
                 <!-- <li>
@@ -205,8 +314,9 @@
                 <li>Click On
                     <ul>
                         <li>corresponding image to the indicator will replace the current image if need be</li>
-                        <li>eases in with 60% opacity</li>
-                        <li>previously selected indicator will return to default state of 30% opacity</li>
+                        <li>eases with 300ms to 60% opacity with 31px width</li>
+                        <li>previously selected indicator will return to default state of 30% opacity with 15px width
+                        </li>
                     </ul>
                 </li>
             </ul>
