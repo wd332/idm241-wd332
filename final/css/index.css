@@ -1,0 +1,147 @@
+@font-face {
+    font-family: Quicksand;
+    src: url('../font/Quicksand-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Overlock;
+    src: url('../font/Overlock-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+.layout {
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Overlock";
+    font-size: 2.5rem;
+    margin-top: 5.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Overlock";
+    font-size: 1.5rem;
+    margin: 60px auto 0;
+}
+
+.link,
+.prototype {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.prototype {
+    margin: 20px auto 50px;
+}
+
+a {
+    font-family: "Quicksand";
+    font-weight: 600;
+    font-size: 0.9375rem;
+
+    background-color: black;
+    border-radius: 1.875rem;
+    box-shadow: 0 0 0.25rem 0.0625rem rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 10px 14px 12px;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+.gif {
+    text-align: center;
+}
+
+img {
+    border-radius: 1.875rem;
+    width: 100%;
+}
+
+.info {
+    margin-top: 50px;
+}
+
+p {
+    font-family: "Quicksand";
+    font-size: 1.05rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    margin: 20px auto 0;
+}
+
+ul {
+    margin: 5px auto 10px;
+}
+
+li {
+    font-family: "Quicksand";
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+hr {
+    margin: 30px auto;
+}
+
+@media screen and (max-width: 810px) {
+    .layout {
+        margin: 0 10px;
+    }
+}
