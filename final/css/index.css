@@ -106,11 +106,8 @@ a:visited {
 
 .gif {
     text-align: center;
-}
-
-img {
+    background-color: black;
     border-radius: 1.875rem;
-    width: 100%;
 }
 
 .info {
