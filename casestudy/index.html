@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="hero">
+        <img id="hero" class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920" height="1112">
+    </div>
+    <div class="layout">
+        <h1>Microinteractions - Case Study</h1>
+        <div class="bg">
+            <a href="https://www.teamlab.art/e/tokyo/" target="_blank" class="product">
+                <div class="card">
+                    <div class="card-image">
+                        <div class="image-scale-wrapper">
+                            <div class="image-slider" id="imageSlider">
+                                <img class="exhibition" src="images/image3.webp" alt="exhibition" width="3840"
+                                    height="2160">
+                                <img class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920"
+                                    height="1112">
+                                <img class="exhibition" src="images/image2.webp" alt="exhibition" width="3840"
+                                    height="2160">
+                                <img class="exhibition" src="images/image3.webp" alt="exhibition" width="3840"
+                                    height="2160">
+                                <img class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920"
+                                    height="1112">
+                            </div>
+                        </div>
+                        <div class="nav-controls">
+                            <button class="arrow arrow-left" onclick="previousImage(event)">←</button>
+                            <button class="arrow arrow-right" onclick="nextImage(event)">→</button>
+
+                            <div class="page-indicators" id="indicators">
+                                <span class="indicator active"></span>
+                                <span class="indicator"></span>
+                                <span class="indicator"></span>
+                            </div>
+                        </div>
+                        <div class="status-box">
+                            <p class="status">ON VIEW</p>
+                            <div class="popup"> This is available now </div>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h3>teamLab Borderless: MORI Building DIGITAL ART MUSEUM</h3>
+                        <p>Feb 09, 2024 - Permanent&nbsp;&nbsp;&nbsp;&nbsp;Azabudai Hills, Tokyo</p>
+                        <p>teamLab Museum</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <hr>
+        <div class="info">
+            <h2>Triggers</h2>
+            <p>Exhibition Card Underneath Banner:</p>
+            <ul>
+                <li>hover on</li>
+                <li>hover off</li>
+                <li>click on</li>
+            </ul>
+            <p>Left Arrow:</p>
+            <ul>
+                <li>hover one</li>
+                <li>hover off</li>
+                <li>click on</li>
+            </ul>
+            <p>Right Arrow:</p>
+            <ul>
+                <li>hover one</li>
+                <li>hover off</li>
+                <li>click on</li>
+            </ul>
+            <p>On View Box:</p>
+            <ul>
+                <li>hover on</li>
+                <li>hover off</li>
+            </ul>
+            <p>Page Indicators:</p>
+            <ul>
+                <li>hover on</li>
+                <li>hover off</li>
+                <li>click on</li>
+            </ul>
+            <h2>Rules</h2>
+            <p>Exhibition Card:</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>expands image from the center slightly by 15%</li>
+                        <li>cursor changes to the finger</li>
+                        <li>ease in with a duration of 0.53s</li>
+                        <ul>
+                            <li>left & right arrows appear on top of the image</li>
+                            <li>page indicators appear on top of the image</li>
+                            <li>a glow of white, 25% opacity drop shadow with a blur of 100 and spread of 10 at origin
+                                surrounds the border of the card</li>
+                        </ul>
+                    </ul>
+                </li>
+                <li>Hover Off
+                    <ul>
+                        <li>back to default state</li>
+                        <ul>
+                            <li>shrinks image back</li>
+                            <li>cursor returns to normal</li>
+                        </ul>
+                        <li>ease out</li>
+                        <ul>
+                            <li>left & right arrows</li>
+                            <li>page indicators</li>
+                            <li>drop shadow</li>
+                        </ul>
+                    </ul>
+                </li>
+                <li>Click On
+                    <ul>
+                        <li>view exhibit details on another page</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Left Arrow</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>background color eases with 0.2s to 40% opacity</li>
+                    </ul>
+                </li>
+                <li>
+                    Hover Off
+                    <ul>
+                        <li>background color returns to default state</li>
+                    </ul>
+                </li>
+                <li>
+                    Click on
+                    <ul>
+                        <li>image will slide in from the left</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Right Arrow</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>background color eases with 0.2s to 40% opacity</li>
+                    </ul>
+                </li>
+                <li>
+                    Hover Off
+                    <ul>
+                        <li>background color returns to default state</li>
+                    </ul>
+                </li>
+                <li>
+                    Click on
+                    <ul>
+                        <li>image will slide in from the right</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>On View Box:</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>a popup text called "This is available now" expands out towards the top right with a
+                            duration of 0.9s</li>
+                        <li>bounces/springs right after popping out</li>
+                    </ul>
+                </li>
+                <li>Hover Off
+                    <ul>
+                        <li>the text shrinks back into the box with a ease out of 0.9s</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Page Indicators:</p>
+            <ul>
+                <!-- <li>
+                    Hover On
+                    <ul>
+                        <li>page indicator becomes brighter slowly</li>
+                        <li>if the page indicator is already selected and is bright, it will not become brighter</li>
+                    </ul>
+                </li>
+                <li>Hover Off
+                    <ul>
+                        <li>page indicator returns to default</li>
+                        <li>page indicator that is selected will not have any changes happen to it</li>
+                    </ul>
+                </li> -->
+                <li>Click On
+                    <ul>
+                        <li>corresponding image to the indicator will replace the current image if need be</li>
+                        <li>eases with 0.3s to 60% opacity with 31px width</li>
+                        <li>previously selected indicator will return to default state of 30% opacity with 15px width
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>Feedback</h2>
+            <p>Exhibition Card:</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>expands image from the center slightly by 15%</li>
+                        <li>cursor changes to the finger</li>
+                        <li>ease in with a duration of 0.53s</li>
+                        <ul>
+                            <li>left & right arrows appear on top of the image</li>
+                            <li>page indicators appear on top of the image</li>
+                            <li>a glow of white, 25% opacity drop shadow with a blur of 100 and spread of 10 at origin
+                                surrounds the border of the card</li>
+                        </ul>
+                    </ul>
+                </li>
+                <li>Hover Off
+                    <ul>
+                        <li>back to default state</li>
+                        <ul>
+                            <li>shrinks image back</li>
+                            <li>cursor returns to normal</li>
+                        </ul>
+                        <li>ease out</li>
+                        <ul>
+                            <li>left & right arrows</li>
+                            <li>page indicators</li>
+                            <li>drop shadow</li>
+                        </ul>
+                    </ul>
+                </li>
+                <li>Click On
+                    <ul>
+                        <li>view exhibit details on another page</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Left Arrow</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>background color eases with 0.2s to 40% opacity</li>
+                    </ul>
+                </li>
+                <li>
+                    Hover Off
+                    <ul>
+                        <li>background color returns to default state</li>
+                    </ul>
+                </li>
+                <li>
+                    Click on
+                    <ul>
+                        <li>image will slide in from the left</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Right Arrow</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>background color eases with 0.2s to 40% opacity</li>
+                    </ul>
+                </li>
+                <li>
+                    Hover Off
+                    <ul>
+                        <li>background color returns to default state</li>
+                    </ul>
+                </li>
+                <li>
+                    Click on
+                    <ul>
+                        <li>image will slide in from the right</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>On View Box:</p>
+            <ul>
+                <li>
+                    Hover On
+                    <ul>
+                        <li>a popup text called "This is available now" expands out towards the top right with a
+                            duration of 0.9s</li>
+                        <li>bounces/springs right after popping out</li>
+                    </ul>
+                </li>
+                <li>Hover Off
+                    <ul>
+                        <li>the text shrinks back into the box with a ease out of 0.9s</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Page Indicators:</p>
+            <ul>
+                <!-- <li>
+                    Hover On
+                    <ul>
+                        <li>page indicator becomes brighter slowly</li>
+                        <li>if the page indicator is already selected and is bright, it will not become brighter</li>
+                    </ul>
+                </li>
+                <li>Hover Off
+                    <ul>
+                        <li>page indicator returns to default</li>
+                        <li>page indicator that is selected will not have any changes happen to it</li>
+                    </ul>
+                </li> -->
+                <li>Click On
+                    <ul>
+                        <li>corresponding image to the indicator will replace the current image if need be</li>
+                        <li>eases with 0.3s to 60% opacity with 31px width</li>
+                        <li>previously selected indicator will return to default state of 30% opacity with 15px width
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>Loops & Modes</h2>
+            <ul>
+                <li>none</li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
