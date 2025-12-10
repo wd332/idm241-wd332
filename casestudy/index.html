@@ -10,328 +10,177 @@
 </head>
 
 <body>
-    <div class="hero">
-        <img id="hero" class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920" height="1112">
-    </div>
+    <img id="hero" class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920" height="1112">
     <div class="layout">
         <h1>Microinteractions - Case Study</h1>
-        <div class="bg">
-            <a href="https://www.teamlab.art/e/tokyo/" target="_blank" class="product">
-                <div class="card">
-                    <div class="card-image">
-                        <div class="image-scale-wrapper">
-                            <div class="image-slider" id="imageSlider">
-                                <img class="exhibition" src="images/image3.webp" alt="exhibition" width="3840"
-                                    height="2160">
-                                <img class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920"
-                                    height="1112">
-                                <img class="exhibition" src="images/image2.webp" alt="exhibition" width="3840"
-                                    height="2160">
-                                <img class="exhibition" src="images/image3.webp" alt="exhibition" width="3840"
-                                    height="2160">
-                                <img class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920"
-                                    height="1112">
-                            </div>
-                        </div>
-                        <div class="nav-controls">
-                            <button class="arrow arrow-left" onclick="previousImage(event)">←</button>
-                            <button class="arrow arrow-right" onclick="nextImage(event)">→</button>
+        <div class="info">
+            <h2>Context & Challenge</h2>
+            <p> teamLab provides a wide range of exhibitions all around the world. Through their expansive visuals from
+                each exhibit, users can expect what to happen before commitment. But for users to see more about
+                something, they would have to go through the extra step of clicking into it and then go back to the
+                previous screen to see other options. What if there was an alternative?</p>
+            <p>Predictive and enjoyable interactive designs allow users to have a better experience when engaging with a
+                website. In this 10-week project, I tackled issues users experience when browsing through different
+                exhibitions to see. Through prototyping and development, a more interactive experience with the
+                exhibition card is formed.
+            </p>
+            <hr>
+            <h2>Process & Insight</h2>
+            <!--what insights did you gain during each area. this and solution can be mixed, but this section is for everything you tried.
+            solution is what you ended up choosing-->
+            <p>During this iterative process in designing the final product, I went through various phases of design and
+                development.</p>
+            <h3>Alpha</h3>
+            <p>In this phase, I determined the current microinteractions the exhibition card provided and replicated it
+                in code.</p>
+            <p>Microinteraction Include:</p>
+            <ul>
+                <li>exhibition card</li>
+            </ul>
+            <div class="gif">
+                <img id="alpha" src="images/alpha.gif" alt="microinteraction" width="426" />
+            </div>
+            <h3>Beta</h3>
+            <p>In this phase, I prototyped and created new features that would enhance the experience for
+                users. I then took that design through development.</p>
+            <p>Microinteractions Include:</p>
+            <ul>
+                <li>exhibition card</li>
+                <li>on view box</li>
+                <li>page indicators</li>
+            </ul>
+            <div class="gif">
+                <img id="beta" src="images/beta.gif" alt="microinteraction" width="426" />
+            </div>
+            <h3>Final</h3>
+            <p>In this phase, I built upon my Beta prototype and fleshed out my microinteractions in the design and
+                development.</p>
+            <p>Microinteractions Include:</p>
+            <ul>
+                <li>exhibition card</li>
+                <li>on view box</li>
+                <li>page indicators</li>
+                <li>left arrow</li>
+                <li>right arrow</li>
+            </ul>
+            <div class="gif">
+                <video width="700" height="448" controls>
+                    <source src="images/final.mp4" alt="microinteraction" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h3>Design Sketches</h3>
+            <p>teamLab's intention with the "ON VIEW" box is for users to know that the exhibit is currently live and
+                available for booking. However, the shape of it looked like a interactable button and didn't express the
+                intention it's suppose to.</p>
+            <p>I created a couple of designs to see what would be a better alternative to inform users intuitively.</p>
+            <img class="design" src="images/wireframe.png" alt="design sketches" width="952" height="736" />
+            <h3>Code/Development</h3>
+            <p>I made a carousel/slider that loops infinitely in both directions. Think of it like a circular conveyor
+                belt. When you reach the the "end", you're actually already back at the beginning without realizing it.
+            </p>
+            <div class="diagram-container">
+                <div class="section">
+                    <strong>[What You See]</strong><br>
+                    <span class="user-view">Photo 1 → Photo 2 → Photo 3 → Photo 1 → Photo 2</span>
+                </div>
 
-                            <div class="page-indicators" id="indicators">
-                                <span class="indicator active"></span>
-                                <span class="indicator"></span>
-                                <span class="indicator"></span>
-                            </div>
-                        </div>
-                        <div class="status-box">
-                            <p class="status">ON VIEW</p>
-                            <div class="popup"> This is available now </div>
-                        </div>
+                <div class="section">
+                    <strong>[What's Really There]</strong><br>
+                    <div class="carousel-structure">
+                        <span class="clone">Copy 3</span>
+                        <span class="real-image">Photo 1</span>
+                        <span class="real-image">Photo 2</span>
+                        <span class="real-image">Photo 3</span>
+                        <span class="clone">Copy 1</span>
                     </div>
-                    <div class="desc">
-                        <h3>teamLab Borderless: MORI Building DIGITAL ART MUSEUM</h3>
-                        <p>Feb 09, 2024 - Permanent&nbsp;&nbsp;&nbsp;&nbsp;Azabudai Hills, Tokyo</p>
-                        <p>teamLab Museum</p>
+                    <div class="arrow-container">
+                        ↑_____________________________|<br>
+                        <span class="arrow-label">(invisible jump back)</span>
                     </div>
                 </div>
-            </a>
-        </div>
-        <hr>
-        <div class="info">
-            <h2>Triggers</h2>
-            <p>Exhibition Card Underneath Banner:</p>
+            </div>
+            <p>What It Does:</p>
             <ul>
-                <li>hover on</li>
-                <li>hover off</li>
-                <li>click on</li>
+                <li>slides smoothly between images</li>
+                <li>never stops/loops infinitely</li>
             </ul>
-            <p>Left Arrow:</p>
-            <ul>
-                <li>hover one</li>
-                <li>hover off</li>
-                <li>click on</li>
-            </ul>
-            <p>Right Arrow:</p>
-            <ul>
-                <li>hover one</li>
-                <li>hover off</li>
-                <li>click on</li>
-            </ul>
-            <p>On View Box:</p>
-            <ul>
-                <li>hover on</li>
-                <li>hover off</li>
-            </ul>
-            <p>Page Indicators:</p>
-            <ul>
-                <li>hover on</li>
-                <li>hover off</li>
-                <li>click on</li>
-            </ul>
-            <h2>Rules</h2>
-            <p>Exhibition Card:</p>
-            <ul>
-                <li>
-                    Hover On
-                    <ul>
-                        <li>expands image from the center slightly by 15%</li>
-                        <li>cursor changes to the finger</li>
-                        <li>ease in with a duration of 0.53s</li>
-                        <ul>
-                            <li>left & right arrows appear on top of the image</li>
-                            <li>page indicators appear on top of the image</li>
-                            <li>a glow of white, 25% opacity drop shadow with a blur of 100 and spread of 10 at origin
-                                surrounds the border of the card</li>
-                        </ul>
-                    </ul>
-                </li>
-                <li>Hover Off
-                    <ul>
-                        <li>back to default state</li>
-                        <ul>
-                            <li>shrinks image back</li>
-                            <li>cursor returns to normal</li>
-                        </ul>
-                        <li>ease out</li>
-                        <ul>
-                            <li>left & right arrows</li>
-                            <li>page indicators</li>
-                            <li>drop shadow</li>
-                        </ul>
-                    </ul>
-                </li>
-                <li>Click On
-                    <ul>
-                        <li>view exhibit details on another page</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>Left Arrow</p>
-            <ul>
-                <li>
-                    Hover On
-                    <ul>
-                        <li>background color eases with 0.2s to 40% opacity</li>
-                    </ul>
-                </li>
-                <li>
-                    Hover Off
-                    <ul>
-                        <li>background color returns to default state</li>
-                    </ul>
-                </li>
-                <li>
-                    Click on
-                    <ul>
-                        <li>image will slide in from the left</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>Right Arrow</p>
-            <ul>
-                <li>
-                    Hover On
-                    <ul>
-                        <li>background color eases with 0.2s to 40% opacity</li>
-                    </ul>
-                </li>
-                <li>
-                    Hover Off
-                    <ul>
-                        <li>background color returns to default state</li>
-                    </ul>
-                </li>
-                <li>
-                    Click on
-                    <ul>
-                        <li>image will slide in from the right</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>On View Box:</p>
-            <ul>
-                <li>
-                    Hover On
-                    <ul>
-                        <li>a popup text called "This is available now" expands out towards the top right with a
-                            duration of 0.9s</li>
-                        <li>bounces/springs right after popping out</li>
-                    </ul>
-                </li>
-                <li>Hover Off
-                    <ul>
-                        <li>the text shrinks back into the box with a ease out of 0.9s</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>Page Indicators:</p>
-            <ul>
-                <!-- <li>
-                    Hover On
-                    <ul>
-                        <li>page indicator becomes brighter slowly</li>
-                        <li>if the page indicator is already selected and is bright, it will not become brighter</li>
-                    </ul>
-                </li>
-                <li>Hover Off
-                    <ul>
-                        <li>page indicator returns to default</li>
-                        <li>page indicator that is selected will not have any changes happen to it</li>
-                    </ul>
-                </li> -->
-                <li>Click On
-                    <ul>
-                        <li>corresponding image to the indicator will replace the current image if need be</li>
-                        <li>eases with 0.3s to 60% opacity with 31px width</li>
-                        <li>previously selected indicator will return to default state of 30% opacity with 15px width
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <h2>Feedback</h2>
-            <p>Exhibition Card:</p>
-            <ul>
-                <li>
-                    Hover On
-                    <ul>
-                        <li>expands image from the center slightly by 15%</li>
-                        <li>cursor changes to the finger</li>
-                        <li>ease in with a duration of 0.53s</li>
-                        <ul>
-                            <li>left & right arrows appear on top of the image</li>
-                            <li>page indicators appear on top of the image</li>
-                            <li>a glow of white, 25% opacity drop shadow with a blur of 100 and spread of 10 at origin
-                                surrounds the border of the card</li>
-                        </ul>
-                    </ul>
-                </li>
-                <li>Hover Off
-                    <ul>
-                        <li>back to default state</li>
-                        <ul>
-                            <li>shrinks image back</li>
-                            <li>cursor returns to normal</li>
-                        </ul>
-                        <li>ease out</li>
-                        <ul>
-                            <li>left & right arrows</li>
-                            <li>page indicators</li>
-                            <li>drop shadow</li>
-                        </ul>
-                    </ul>
-                </li>
-                <li>Click On
-                    <ul>
-                        <li>view exhibit details on another page</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>Left Arrow</p>
-            <ul>
-                <li>
-                    Hover On
-                    <ul>
-                        <li>background color eases with 0.2s to 40% opacity</li>
-                    </ul>
-                </li>
-                <li>
-                    Hover Off
-                    <ul>
-                        <li>background color returns to default state</li>
-                    </ul>
-                </li>
-                <li>
-                    Click on
-                    <ul>
-                        <li>image will slide in from the left</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>Right Arrow</p>
-            <ul>
-                <li>
-                    Hover On
-                    <ul>
-                        <li>background color eases with 0.2s to 40% opacity</li>
-                    </ul>
-                </li>
-                <li>
-                    Hover Off
-                    <ul>
-                        <li>background color returns to default state</li>
-                    </ul>
-                </li>
-                <li>
-                    Click on
-                    <ul>
-                        <li>image will slide in from the right</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>On View Box:</p>
-            <ul>
-                <li>
-                    Hover On
-                    <ul>
-                        <li>a popup text called "This is available now" expands out towards the top right with a
-                            duration of 0.9s</li>
-                        <li>bounces/springs right after popping out</li>
-                    </ul>
-                </li>
-                <li>Hover Off
-                    <ul>
-                        <li>the text shrinks back into the box with a ease out of 0.9s</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>Page Indicators:</p>
-            <ul>
-                <!-- <li>
-                    Hover On
-                    <ul>
-                        <li>page indicator becomes brighter slowly</li>
-                        <li>if the page indicator is already selected and is bright, it will not become brighter</li>
-                    </ul>
-                </li>
-                <li>Hover Off
-                    <ul>
-                        <li>page indicator returns to default</li>
-                        <li>page indicator that is selected will not have any changes happen to it</li>
-                    </ul>
-                </li> -->
-                <li>Click On
-                    <ul>
-                        <li>corresponding image to the indicator will replace the current image if need be</li>
-                        <li>eases with 0.3s to 60% opacity with 31px width</li>
-                        <li>previously selected indicator will return to default state of 30% opacity with 15px width
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <h2>Loops & Modes</h2>
-            <ul>
-                <li>none</li>
-            </ul>
+            <!-- <p>I made an infinite looping carousel/slider using my left and right arrows by duplicating the first and
+                last image and placing them next to their counterparts to create that looping effect. Then in
+                JavaScript, users will begin starting in the 1st real miage to give room to scroll back to the copy.
+                There are if statements that </p> -->
+            <p>I also made an animation that emphasizes the popup instead of it simply easing in to give it a more
+                lively feeling, with a hint of surprise for users.</p>
+            <hr>
+            <h2>The Solution</h2>
+            <p>In the beginning, the exhibit card showed a simple hover state that required users to click into it to
+                see more information. I reformed this by making the card light up when it's hovered so users focus on it
+                better and added images into the card so that users can view it without
+                the additional hassle of transitioning between pages. </p>
+            <p>I wanted to take advantage of the fact that users think the "ON VIEW" box is a button. Users would
+                naturally move their cursor over to try and click on it, so I created a popup when they hover over it.
+                Since teamLab is an exhibition site that showcases immersive art experiences, I wanted to hone in on
+                their brand with the popup animation so users can enjoy their experience while on the website. It
+                gives them an introduction to what they will experience before getting the real thing.
+            </p>
+            <p>Coded Exhibition Card:</p>
+            <div class="bg">
+                <a href="https://www.teamlab.art/e/tokyo/" target="_blank" class="product">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="image-scale-wrapper">
+                                <div class="image-slider" id="imageSlider">
+                                    <img class="exhibition" src="images/image3.webp" alt="exhibition" width="3840"
+                                        height="2160">
+                                    <img class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920"
+                                        height="1112">
+                                    <img class="exhibition" src="images/image2.webp" alt="exhibition" width="3840"
+                                        height="2160">
+                                    <img class="exhibition" src="images/image3.webp" alt="exhibition" width="3840"
+                                        height="2160">
+                                    <img class="exhibition" src="images/exhibition.avif" alt="exhibition" width="1920"
+                                        height="1112">
+                                </div>
+                            </div>
+                            <div class="nav-controls">
+                                <button class="arrow arrow-left" onclick="previousImage(event)">←</button>
+                                <button class="arrow arrow-right" onclick="nextImage(event)">→</button>
+
+                                <div class="page-indicators" id="indicators">
+                                    <span class="indicator active"></span>
+                                    <span class="indicator"></span>
+                                    <span class="indicator"></span>
+                                </div>
+                            </div>
+                            <div class="status-box">
+                                <p class="status">ON VIEW</p>
+                                <div class="popup"> This is available now </div>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <h3>teamLab Borderless: MORI Building DIGITAL ART MUSEUM</h3>
+                            <p>Feb 09, 2024 - Permanent&nbsp;&nbsp;&nbsp;&nbsp;Azabudai Hills, Tokyo</p>
+                            <p>teamLab Museum</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="prototype">
+                <a href="https://www.figma.com/proto/OLZKqNc84xJe2CPdzyxAcD/Untitled?page-id=0%3A1&node-id=5-91&viewport=509%2C950%2C0.4&t=6B1XPJN1nYJe0LzQ-1&scaling=min-zoom&content-scaling=fixed"
+                    target="_blank">Figma Microinteraction Prototype</a>
+            </div>
+            <hr>
+            <h2>The Results</h2>
+            <p>In my 10 weeks, I determined what could be done to improve the user's experience with the site by
+                addressing
+                current issues and adding more features into the exhibition card. Through ideating, designing,
+                prototyping,
+                and finally development, I created a fully functioning exhibition card that teamLab can take in to
+                enhance
+                their website with documented microinteractions to assist them.</p>
+            <!-- <p>During this project, I refined my prototyping skills and further developed by coding skills. I learned how to
+            take advantage of what the brand had to offer to and how users interact with things to improve them.</p> -->
+            <hr>
         </div>
     </div>
     <script src="js/script.js"></script>
