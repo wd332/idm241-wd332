@@ -14,6 +14,17 @@
     <div class="layout">
         <h1>Microinteractions - Case Study</h1>
         <div class="info">
+            <h2>The Overview</h2>
+            <p>teamLab's exhibition cards provide visually rich previews, but their limited interactivity forces users
+                to click in and out of pages to compare installations, creating unnecessary friction for exploration.
+                Over 10 weeks, I redesigned this experience by enhancing the card with predictive, intuitive
+                microinteractions that let users understand more at a glance.</p>
+            <p>Through three phases, Alpha, Beta, and
+                Final, I introduced features such as a glowing hover state for focus, an infinite looping carousel,
+                directional arrows, page indicators, and a responsive popup for the “ON VIEW” label. The final solution
+                creates a smoother, more expressive browsing experience that reflects teamLab's immersive brand and
+                enables users to preview exhibitions more efficiently and enjoyably.</p>
+            <hr>
             <h2>Context & Challenge</h2>
             <p> teamLab provides a wide range of exhibitions all around the world. Through their expansive visuals from
                 each exhibit, users can expect what to happen before commitment. But for users to see more about
@@ -28,20 +39,36 @@
             <h2>Process & Insight</h2>
             <!--what insights did you gain during each area. this and solution can be mixed, but this section is for everything you tried.
             solution is what you ended up choosing-->
-            <p>During this iterative process in designing the final product, I went through various phases of design and
-                development.</p>
-            <h3>Alpha</h3>
-            <p>In this phase, I determined the current microinteractions the exhibition card provided and replicated it
+            <h3>Target Audience</h3>
+            <p>The target audience consists of visitors exploring teamLab's digital exhibitions online. They are
+                curious, visually driven, and interested in interactive art experiences. These users rely on product
+                cards to quickly understand an artwork, preview its details, and decide whether to explore further. They
+                value smooth, intuitive interactions, clear hierarchy, and microinteractions that feel expressive and
+                aligned with teamLab's immersive brand personality.</p>
+            <h3>Phases: Alpha, Beta, Final</h3>
+            <p>During this iterative process in designing the final product, I went through Alpha, Beta, and Final
+                phases of design and development.</p>
+            <p>In Alpha, I determined the current microinteractions the exhibition card provided and replicated it
                 in code.</p>
             <p>Microinteraction Include:</p>
             <ul>
                 <li>exhibition card</li>
             </ul>
             <div class="gif">
-                <img id="alpha" src="images/alpha.gif" alt="microinteraction" width="426" />
+                <video id="alpha" width="624" height="466" controls>
+                    <source src="images/alpha.mp4" alt="microinteraction" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            <h3>Beta</h3>
-            <p>In this phase, I prototyped and created new features that would enhance the experience for
+            <div class="learn">
+                <p>What I Discovered:</p>
+                <ul>
+                    <li>the structure of the exhibition card when I coded it</li>
+                    <li>how to keep the image inside of it's container when hovered on</li>
+                    <li>layering with absolute and relative positioning of objects</li>
+                </ul>
+            </div>
+            <p>In Beta, I prototyped and created new features that would enhance the experience for
                 users. I then took that design through development.</p>
             <p>Microinteractions Include:</p>
             <ul>
@@ -50,7 +77,22 @@
                 <li>page indicators</li>
             </ul>
             <div class="gif">
-                <img id="beta" src="images/beta.gif" alt="microinteraction" width="426" />
+                <video id="beta" width="680" height="520" controls>
+                    <source src="images/beta.mp4" alt="microinteraction" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="learn">
+                <p>What I Discovered:</p>
+                <ul>
+                    <li>a glow around the card helps users locate what they are currently on and brings attention to
+                        them</li>
+                    <li>because the "ON VIEW" box looks like a button, I redesigned it to fit its intended intention
+                    </li>
+                    <li>a carousel/slider lessens the need to go back and forth between pages to see what is offered
+                    </li>
+                    <li>page indicators help with knowing how many images there are and the positions of them</li>
+                </ul>
             </div>
             <h3>Final</h3>
             <p>In this phase, I built upon my Beta prototype and fleshed out my microinteractions in the design and
@@ -69,12 +111,26 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
+            <div class="learn">
+                <p>What I Discovered:</p>
+                <ul>
+                    <li>left and right arrows gives clarification on where images will come in from</li>
+                    <li>if the carousel/slider doesn't loop infinitely, it creates a disruption in the user's experience
+                        even if the transition isn't sudden or snappy</li>
+                </ul>
+            </div>
             <h3>Design Sketches</h3>
             <p>teamLab's intention with the "ON VIEW" box is for users to know that the exhibit is currently live and
                 available for booking. However, the shape of it looked like a interactable button and didn't express the
                 intention it's suppose to.</p>
             <p>I created a couple of designs to see what would be a better alternative to inform users intuitively.</p>
             <img class="design" src="images/wireframe.png" alt="design sketches" width="952" height="736" />
+            <p>I wanted to take advantage of the fact that users think the "ON VIEW" box is a button. Users would
+                naturally move their cursor over to try and click on it, so I created a popup when they hover over it.
+                Since teamLab is an exhibition site that showcases immersive art experiences, I wanted to hone in on
+                their brand with the popup animation so users can enjoy their experience while on the website. It
+                gives them an introduction to what they will experience before getting the real thing.
+            </p>
             <h3>Code/Development</h3>
             <p>I made a carousel/slider that loops infinitely in both directions. Think of it like a circular conveyor
                 belt. When you reach the the "end", you're actually already back at the beginning without realizing it.
@@ -113,17 +169,19 @@
                 lively feeling, with a hint of surprise for users.</p>
             <hr>
             <h2>The Solution</h2>
-            <p>In the beginning, the exhibit card showed a simple hover state that required users to click into it to
-                see more information. I reformed this by making the card light up when it's hovered so users focus on it
-                better and added images into the card so that users can view it without
-                the additional hassle of transitioning between pages. </p>
-            <p>I wanted to take advantage of the fact that users think the "ON VIEW" box is a button. Users would
-                naturally move their cursor over to try and click on it, so I created a popup when they hover over it.
-                Since teamLab is an exhibition site that showcases immersive art experiences, I wanted to hone in on
-                their brand with the popup animation so users can enjoy their experience while on the website. It
-                gives them an introduction to what they will experience before getting the real thing.
-            </p>
-            <p>Coded Exhibition Card:</p>
+            <p>Solution:</p>
+            <ul>
+                <li>the card will light up when it's hovered so users focus on it better</li>
+                <li>the card has a carousel/slider so users can view it without the additional hassle of transitioning
+                    between pages</li>
+                <ul>
+                    <li>left and right arrows allows users to transition between images</li>
+                    <li>page indicators allow users to know what image they are on</li>
+                </ul>
+                <li>"ON VIEW" box will have a popup animation when hovered over so users can enjoy their experience
+                    while on the website</li>
+            </ul>
+            <p>Coded Out Exhibition Card:</p>
             <div class="bg">
                 <a href="https://www.teamlab.art/e/tokyo/" target="_blank" class="product">
                     <div class="card">
